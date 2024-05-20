@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html><head>
+   <title>LMV2SHL</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="robots" content="noindex,follow" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ 
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <!-- This block defines the styles of the TOC headings, change them as needed -->
+   <style type="text/css">
+       body { font-size: 1em }
+       .heading1 { color: #000; text-decoration: none; }
+       .heading2 { color: #000; text-decoration: none; }
+       .heading3 { color: #000; text-decoration: none; }
+       .heading4 { color: #000; text-decoration: none; }
+       .heading5 { color: #000; text-decoration: none; }
+       .heading6 { color: #000; text-decoration: none; }
+
+       .hilight1 { color: #FFFFFF; background: #404040; text-decoration: none; }
+       .hilight2 { color: #FFFFFF; background: #404040; text-decoration: none; }
+       .hilight3 { color: #FFFFFF; background: #404040; text-decoration: none; }
+       .hilight4 { color: #FFFFFF; background: #404040; text-decoration: none; }
+       .hilight5 { color: #FFFFFF; background: #404040; text-decoration: none; }
+       .hilight6 { color: #FFFFFF; background: #404040; text-decoration: none; }
+
+       /* TOC LIST CSS */
+       #toc    { padding:0; margin:0 }
+       #toc li { 
+			margin-top:2px; 
+			margin-left:0; 
+			padding: 1px;
+			background-position: 0px 3px !important;
+			background-size: 18px 18px !important;
+            padding-left: 23px !important;
+			}
+       #toc ul { padding-left:0; margin-left:0px }       
+       /* TOC LIST CSS */
+       
+       @media (pointer: coarse) {
+         body    { transform-origin: 0 0;
+		   transform:scale(1.25); 
+		   max-width: 80%;
+       }       
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript">
+   $(document).ready(function(){
+   	   var hiTest = /^hilight/im,
+			parentScope = (parent.hmNavigationFrame);
+		if (parentScope) parent.currentNav("toc");
+		$("a[class^='heading']").on("click",function(event){
+			var doSwipe = (hiTest.test($(this).children("span").first().attr("class")) || false || (parentScope && !parent.hmBrowser.nonDeskTouch));
+			if (doSwipe && parentScope) {
+			window.parent.showNav("toggle");
+			}
+			});
+     });
+   </script>
+      <script type="text/javascript">
+     var parentScope = (parent.hmNavigationFrame);
+     if (!parentScope) {
+		      var s = document.createElement("script");
+		      s.setAttribute("type","text/javascript");
+		      s.setAttribute("src", "helpman_navigation.js");
+		      document.getElementsByTagName("head")[0].appendChild(s);
+	    }
+     else {
+       if (initialtocstate != "expandall") parent.hmAddCss(document, "#toc li ul { display: none }");
+     }
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { if (parentScope) parent.loadstate(document.getElementById("toc")); else loadstate(document.getElementById("toc")); }
+     function savetoc() { if (parentScope) parent.savestate(document.getElementById("toc")); else savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); if (parentScope) parent.hmNodeClicked(node, event); else hmNodeClicked(node, event); }
+     function dblclicked(node) { if (parentScope) parent.hmNodeDblclicked(node); else hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</head>
+<body>
+<ul id="toc" style="list-style-type:none;display:block;padding-left:0">
+<li class="heading1" id="i1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a1" href="introduction.html" target="hmcontent"><span class="heading1" id="s1">Introduction</span></a>
+</li>
+<li class="heading1" id="i2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a2" href="themes.html" target="hmcontent"><span class="heading1" id="s2" ondblclick="return dblclicked(this)">Themes</span></a>
+<ul id="ul2" style="list-style-type:none">
+<li class="heading2" id="i2.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.1" href="why-should-i-join-sheva-logist.html" target="hmcontent"><span class="heading2" id="s2.1">Why should I join Sheva Logistics?</span></a>
+</li>
+<li class="heading2" id="i2.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.2" href="how-to-join-sheva-logistics_.html" target="hmcontent"><span class="heading2" id="s2.2">How to join Sheva Logistics?</span></a>
+</li>
+<li class="heading2" id="i2.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.3" href="how-to-setup-my-paintjob-combo.html" target="hmcontent"><span class="heading2" id="s2.3">How to setup my paintjob combo, player tag and an automatic delivery logging service app?</span></a>
+</li>
+<li class="heading2" id="i2.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.4" href="what-does-validated-status-do-.html" target="hmcontent"><span class="heading2" id="s2.4">What does validated status do to a VTC?</span></a>
+</li>
+<li class="heading2" id="i2.5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.5" href="which-games-does-sheva-logisti.html" target="hmcontent"><span class="heading2" id="s2.5">Which games does Sheva Logistics support?</span></a>
+</li>
+<li class="heading2" id="i2.6" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.6" href="how-often-do-you-host-convoys_.html" target="hmcontent"><span class="heading2" id="s2.6">How often do you host convoys?</span></a>
+</li>
+<li class="heading2" id="i2.7" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.7" href="how-do-i-know-when-theres-a-v.html" target="hmcontent"><span class="heading2" id="s2.7">How do I know when there's a VTC event?</span></a>
+</li>
+<li class="heading2" id="i2.8" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.8" href="do-i-have-to-attend-every-conv.html" target="hmcontent"><span class="heading2" id="s2.8">Do I have to attend every convoy?</span></a>
+</li>
+<li class="heading2" id="i2.9" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.9" href="do-i-need-to-always-use-our-co.html" target="hmcontent"><span class="heading2" id="s2.9">Do I need to always use our combo and player tag?</span></a>
+</li>
+<li class="heading2" id="i2.10" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.10" href="what-is-an-automatic-delivery-.html" target="hmcontent"><span class="heading2" id="s2.10">What is an automatic delivery logging and do you have it?</span></a>
+</li>
+<li class="heading2" id="i2.11" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a2.11" href="do-you-allow-the-use-of-double.html" target="hmcontent"><span class="heading2" id="s2.11">Do you allow the use of double and triple trailers?</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i3" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a3" href="glossary.html" target="hmcontent"><span class="heading1" id="s3" ondblclick="return dblclicked(this)">Glossary</span></a>
+<ul id="ul3" style="list-style-type:none">
+<li class="heading2" id="i3.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.1" href="a.html" target="hmcontent"><span class="heading2" id="s3.1">A</span></a>
+</li>
+<li class="heading2" id="i3.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.2" href="c.html" target="hmcontent"><span class="heading2" id="s3.2">C</span></a>
+</li>
+<li class="heading2" id="i3.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.3" href="d.html" target="hmcontent"><span class="heading2" id="s3.3">D</span></a>
+</li>
+<li class="heading2" id="i3.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.4" href="g.html" target="hmcontent"><span class="heading2" id="s3.4">G</span></a>
+</li>
+<li class="heading2" id="i3.5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.5" href="m.html" target="hmcontent"><span class="heading2" id="s3.5">M</span></a>
+</li>
+<li class="heading2" id="i3.6" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.6" href="n.html" target="hmcontent"><span class="heading2" id="s3.6">N</span></a>
+</li>
+<li class="heading2" id="i3.7" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.7" href="p.html" target="hmcontent"><span class="heading2" id="s3.7">P</span></a>
+</li>
+<li class="heading2" id="i3.8" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.8" href="s.html" target="hmcontent"><span class="heading2" id="s3.8">S</span></a>
+</li>
+<li class="heading2" id="i3.9" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.9" href="t.html" target="hmcontent"><span class="heading2" id="s3.9">T</span></a>
+</li>
+<li class="heading2" id="i3.10" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.10" href="v.html" target="hmcontent"><span class="heading2" id="s3.10">V</span></a>
+</li>
+<li class="heading2" id="i3.11" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.11" href="w.html" target="hmcontent"><span class="heading2" id="s3.11">W</span></a>
+</li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript">loadicons('cicon9.png','cicon2.png','cicon1.png');</script>
+</body>
+</html>
